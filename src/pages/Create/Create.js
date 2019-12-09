@@ -1,13 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { criar } from "./../../actions/contact";
 
-
-const Create = () => {
-    const mData = useSelector(({ contact: { data } }) => data);
+const Create = ({ contact }) => {
+    const dispatch = useDispatch();
 
     return (
-        <div>Contatos {mData.lenght}
-
+        <div>Novo Contato
+            <button data-test="salvar" onClick={() => dispatch(criar(1))}>salvar</button>
+            <Link to="/">Voltar</Link>
         </div>        
     );
   };

@@ -9,11 +9,15 @@ const List = () => {
     <div>
       <div>
         <div>Contatos</div>
-        (
-          mData.length===0 ? (<div data-test={mData.length}> ${mData.length}</div>) 
-                           :
-                             (<div data-test="sem-contatos">Empty State</div>)
-        )
+        {
+        mData.length===0 ? (
+                              <div data-test="sem-contatos">Empty State</div>
+                            ) 
+                            : 
+                            (
+                              <div data-test={mData.length}>{mData.length}</div> 
+                            )
+        }
         
       </div>
       <ul>

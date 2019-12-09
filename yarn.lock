@@ -2823,10 +2823,9 @@ code-point-at@^1.0.0:
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
   integrity sha1-DQcLTQQ6W+ozovGkDi7bPZpMz3c=
 
-codenation-jest-score@^1.0.2:
-  version "1.0.7"
-  resolved "https://artifactory.softplan.com.br/artifactory/api/npm/npm/codenation-jest-score/-/codenation-jest-score-1.0.7.tgz#15030b2ff36ab06a46830bacebd38d67f53cde2e"
-  integrity sha1-FQMLL/NqsGpGgwus69ONZ/U83i4=
+"codenation-jest-score@https://github.com/thecodenation/codenation-jest-score/tarball/master":
+  version "1.0.2"
+  resolved "https://github.com/thecodenation/codenation-jest-score/tarball/master#9d1c5cbd1ce7f2e24327c791c900b12b2eec7013"
 
 collection-visit@^1.0.0:
   version "1.0.0"
