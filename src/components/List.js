@@ -15,7 +15,7 @@ const List = () => {
                             ) 
                             : 
                             (
-                              <div data-test={mData.length}>{mData.length}</div> 
+                              <div data-test={"total-"+mData.length}>{mData.length}</div> 
                             )
         }
         
