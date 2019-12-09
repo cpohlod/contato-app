@@ -1,14 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { criar } from "./../../actions/contact";
+import { criar } from "../../actions/contact";
 
 const Create = ({ contact }) => {
-    const dispatch = useDispatch();
+    const [inputNomeValue, setInputNomeValue] = useState('');
+    const [inputEmailValue, setInputEmailValue] = useState('');
+
+    const salvarHandle = (event) => {
+        event.preventDefault(); 
+    };
 
     return (
         <div>Novo Contato
-            <button data-test="salvar" onClick={() => dispatch(criar(1))}>salvar</button>
+            <input label="Nome" value={inputNomeValue} onChange={e => setInputNomeValue(e.target.value)}/>
+            <input label="Email" value={inputEmailValue} onChange={e => setInputEmailValue(e.target.value)}/>
+            <button data-test="salvar" onClick={salvarHandle}>salvar</button>
             <Link to="/">Voltar</Link>
         </div>        
     );
