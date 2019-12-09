@@ -7,8 +7,8 @@ const Item = ({ contact, idx }) => {
 
   return (
     <p>
-      <p>{contact.name}</p>
-      <p>{contact.email}</p>
+      <p data-test="nome">{contact.name}</p>
+      <p data-test="email">{contact.email}</p>
       <div>
         <button data-test="editar" onClick={() => dispatch(edit(idx))}>edit</button>
         <button data-test="apagar" onClick={() => dispatch(deleteItem(idx))}>delete</button>

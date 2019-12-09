@@ -1,10 +1,14 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Item from "./Item";
 import { useSelector } from "react-redux";
 
 const List = () => {
-  
   const mData = useSelector(({ contact: { data } }) => data);
+  
+  useEffect(() => {
+    localStorage.setItem("mData", JSON.stringify(mData));
+    }, []);
+  ;
 
   return (
     <div>
